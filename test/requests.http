@@ -1,0 +1,33 @@
+### Create a new product request
+POST http://localhost:8001/products/
+Authorization: basic YWRtaW46YWRtaW4=
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "prices": {
+        "BRL": 999,
+        "USD": 299
+    }
+}
+
+### Retrieve product request
+GET http://localhost:8001/products/17?currency=BRL
+
+### Update product request
+PUT http://localhost:8001/products/17
+Authorization: basic YWRtaW46YWRtaW4=
+Content-Type: application/json
+
+{
+    "name": "Product 2",
+    "description": "Product 2 description",
+    "prices": {
+        "BRL": 1999,
+        "EUR": 399
+    }
+}
+
+### Delete product request
+DELETE http://localhost:8001/products/17
+Authorization: basic YWRtaW46YWRtaW4=
